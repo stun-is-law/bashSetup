@@ -1,3 +1,4 @@
+# git
 alias glo="git log --oneline"
 alias g.="git add ."
 alias gll="git pull"
@@ -20,5 +21,21 @@ alias gch-="git checkout -"
 alias gconoe="git commit --amend --no-edit"
 alias ...="cd ../../"
 alias ..="cd ../"
-
-export PS1="\h@\u \[$(tput sgr0)\]\[\033[38;5;13m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;33m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
+alias gchb='function _gchb(){ branch_name="feature/RPA-$1"; echo "checking out to $branch_name"; git checkout "$branch_name"; };_gchb'
+# scripts 
+alias publish-sdk="bash /c/Users/A029616/code/scripts/publish_rb-sdk.sh"
+# nvm
+alias node18="nvm link 18.17.1 && node -v"
+alias node14="nvm link 14.21.3 && node -v"
+# dev logs
+alias sshdevscheduler="ssh dev docker service logs -f --tail 150 runbotics-orchestrator_runbotics-scheduler"
+alias sshdevbot1="ssh dev docker service logs -f --tail 150 runbotics-desktop_runbotics-desktop"
+alias sshdevbot2="ssh dev docker service logs -f --tail 150 runbotics-desktop-2_runbotics-desktop-2"
+alias sshdevnginx="ssh dev docker service logs -f --tail 150 runbotics-nginx_runbotics-nginx"
+# prod logs
+alias sshprodscheduler="ssh prod docker service logs -f --tail 150 runbotics-orchestrator_runbotics-scheduler"
+alias sshprodbot1="ssh prod docker service logs -f --tail 150 runbotics-desktop_runbotics-desktop"
+alias sshprodbot2="ssh prod docker service logs -f --tail 150 runbotics-desktop-2_runbotics-desktop-2"
+alias sshprodnginx="ssh prod docker service logs -f --tail 150 runbotics-nginx_runbotics-nginx"
+# PS1
+export PS1="\[$(tput sgr0)\]\[\033[38;5;13m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;33m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
