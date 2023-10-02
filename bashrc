@@ -27,15 +27,18 @@ alias publish-sdk="bash /c/Users/A029616/code/scripts/publish_rb-sdk.sh"
 # nvm
 alias node18="nvm link 18.17.1 && node -v"
 alias node14="nvm link 14.21.3 && node -v"
-# dev logs
-alias sshdevscheduler="ssh dev docker service logs -f --tail 150 runbotics-orchestrator_runbotics-scheduler"
-alias sshdevbot1="ssh dev docker service logs -f --tail 150 runbotics-desktop_runbotics-desktop"
-alias sshdevbot2="ssh dev docker service logs -f --tail 150 runbotics-desktop-2_runbotics-desktop-2"
-alias sshdevnginx="ssh dev docker service logs -f --tail 150 runbotics-nginx_runbotics-nginx"
-# prod logs
-alias sshprodscheduler="ssh prod docker service logs -f --tail 150 runbotics-orchestrator_runbotics-scheduler"
-alias sshprodbot1="ssh prod docker service logs -f --tail 150 runbotics-desktop_runbotics-desktop"
-alias sshprodbot2="ssh prod docker service logs -f --tail 150 runbotics-desktop-2_runbotics-desktop-2"
-alias sshprodnginx="ssh prod docker service logs -f --tail 150 runbotics-nginx_runbotics-nginx"
+# windows terminal tabs
+alias devtabs='wt -w 0 nt -p "bash" --title "dev scheduler"; wt -w 0 nt -p "bash" --title "dev bot-1"; wt -w 0 nt -p "bash" --title "dev bot-2"'
+alias prodtabs='wt -w 0 nt -p "bash" --title "prod scheduler"; wt -w 0 nt -p "bash" --title "prod bot-1"; wt -w 0 nt -p "bash" --title "prod bot-2"'
+# dev logs | sd = ssh dev
+alias sdscheduler="ssh dev docker service logs -f --tail 150 runbotics-orchestrator_runbotics-scheduler"
+alias sdbot1="ssh dev docker service logs -f --tail 150 runbotics-desktop_runbotics-desktop"
+alias sdbot2="ssh dev docker service logs -f --tail 150 runbotics-desktop-2_runbotics-desktop-2"
+alias sdnginx="ssh dev docker service logs -f --tail 150 runbotics-nginx_runbotics-nginx"
+# prod logs | sp = ssh prod
+alias spscheduler="ssh prod docker service logs -f --tail 150 runbotics-orchestrator_runbotics-scheduler"
+alias spbot1="ssh prod docker service logs -f --tail 150 runbotics-desktop_runbotics-desktop"
+alias spbot2="ssh prod docker service logs -f --tail 150 runbotics-desktop-2_runbotics-desktop-2"
+alias spnginx="ssh prod docker service logs -f --tail 150 runbotics-nginx_runbotics-nginx"
 # PS1
 export PS1="\[$(tput sgr0)\]\[\033[38;5;13m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;33m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
