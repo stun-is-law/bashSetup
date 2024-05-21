@@ -28,6 +28,13 @@ alias ge="git merge"
 alias ...="cd ../../"
 alias ..="cd ../"
 
+# other
+alias hockiklockistanislawjarocki='git push'
+alias hockiklockimyszkamiki='git status'
+
+# shortcuts
+alias cbot="node /c/Users/Lenovo/AppData/Roaming/npm/node_modules/@runbotics/cryptobotics/index.js"
+
 # scripts
 alias publish-sdk="bash /c/Users/A029616/code/scripts/publish_rb-sdk.sh"
 alias mvgo='function _mvgo() { mv "$1" "$2" && cd "$2"; unset -f _mvgo; }; _mvgo'
